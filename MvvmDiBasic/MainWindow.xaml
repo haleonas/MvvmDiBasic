@@ -1,0 +1,21 @@
+﻿<Window x:Class="MvvmDiBasic.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:VM="clr-namespace:MvvmDiBasic.ViewModels"
+        d:DataContext="{d:DesignInstance Type=VM:MainWindowViewmodel}"
+        
+        xmlns:local="clr-namespace:MvvmDiBasic" 
+        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <TextBox Width="250" Text="{Binding Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <Label Width="250" Content="{Binding Text}"/>
+        </StackPanel>
+    </Grid>
+</Window>
